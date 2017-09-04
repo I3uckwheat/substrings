@@ -1,15 +1,15 @@
-def substrings(word, dictionary)
+def substrings(words, dictionary)
   matches = {}
-  word.split().each do |word|
+  dictionary.each do |i|
     count = 0
-    dictionary.each do |i|
-      if word.match(i) 
+    words.split().each do |word|
+      if word.downcase.match(i.downcase) 
         count += 1
         matches[i] = count
       end
     end
   end
-  puts matches
+   puts matches
 end
 
 
